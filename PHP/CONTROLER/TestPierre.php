@@ -1,22 +1,23 @@
 <?php
 
-function chargerClasse($classe)
+function ChargerClasse($classe)
 {
-    if (file_exists("../Controller/" . $classe . ".class.php"))
-    {
-        require "../Controller/" . $classe . ".class.php";
-    }
-
-    if (file_exists("../Model/" . $classe . ".class.php"))
-    {
-        require "../Model/" . $classe . ".class.php";
-    }
-
+    require $classe.".Class.php";
 }
-spl_autoload_register("chargerClasse");
+spl_autoload_register("ChargerClasse");
 
+//VEHICULES
 
 $v = new Vehicules (["idVehicule" => 1 ,"marqueVehicule"=>"Opel","modeleVehicule" => "Corsa C", "immatriculationVehicule" => "AT-178-CP", "klmVehicule" => 257325]);
 
 
+echo "\n";
+
+//INTERVENTIONS
+
 echo $v->toString();
+
+$i = new Interventions (["idPieces" => 1 ,"idReparation"=>2, "quantitePieces" => 5]);
+
+
+echo $i->toString();

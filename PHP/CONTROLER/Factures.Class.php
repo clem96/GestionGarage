@@ -5,7 +5,7 @@ class Factures
   
     /*****************Attributs***************** */
     private $_idFacture;
-    private $_date;
+    private $_dateFacture;
 
     /*****************Accesseurs***************** */
 
@@ -14,17 +14,17 @@ class Factures
         return $this->_idFacture;
     }
 
-    public function setIdFacture(id $idFacture)
+    public function setIdFacture(int $idFacture)
     {
         $this->_idFacture = $idFacture;
     }
 
-    public function getDate()
+    public function getDateFacture()
     {
         return $this->_date;
     }
 
-    public function setDate($date)
+    public function setDateFacture(dateTime $date)
     {
         $this->_date = $date;
     }
@@ -59,33 +59,6 @@ class Factures
      */
     public function toString()
     {
-        return "";
+        return $this->getIdFacture()." - ".$this->getDateFacture()->format("d-m-Y");
     }
-
-    /**
-     * Renvoi vrai si l'objet en paramètre est égal à l'objet appelant
-     *
-     * @param [type] obj
-     * @return bool
-     */
-    public function equalsTo($obj)
-    {
-        return true;
-    }
-    /**
-     * Compare 2 objets
-     * Renvoi 1 si le 1er est >
-     *        0 si ils sont égaux
-     *        -1 si le 1er est <
-     *
-     * @param [type] $obj1
-     * @param [type] $obj2
-     * @return void
-     */
-    public static function compareTo($obj1, $obj2)
-    {
-        return 0;
-    }
-
-    
 }
