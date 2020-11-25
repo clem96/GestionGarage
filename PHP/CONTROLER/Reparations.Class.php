@@ -47,7 +47,7 @@ class Reparations
         return $this->_dateReparation;
     }
 
-    public function setDateReparation(dateTime $dateReparation)
+    public function setDateReparation($dateReparation)
     {
         $this->_dateReparation = $dateReparation;
     }

@@ -6,6 +6,7 @@ function ChargerClasse($classe)
 }
 spl_autoload_register("ChargerClasse");
 
+
 //VEHICULES
 
 $v = new Vehicules (["idVehicule" => 1 ,"marqueVehicule"=>"Opel","modeleVehicule" => "Corsa C", "immatriculationVehicule" => "AT-178-CP", "klmVehicule" => 257325]);
