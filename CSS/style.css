@@ -1,0 +1,22 @@
+
+img{
+   height: 100%;
+   margin: 0px;
+}
+
+div{
+    display: flex;
+    flex: 1;
+}
+
+.centre{
+    justify-content: center;
+}
+
+.displayflex{
+    display: flex;
+}
+
+header{
+    height: 15vh;
+}
