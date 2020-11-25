@@ -25,20 +25,20 @@ DbConnect::init();
 
 // echo"**********************************************";
 
-// on teste la recherche par ID
-echo 'recherche id = 3' . '<br>';
-$p = VehiculesManager::findById(3);
-var_dump($p);
+// // on teste la recherche par ID
+// echo 'recherche id = 3' . '<br>';
+// $p = VehiculesManager::findById(3);
+// var_dump($p);
 
 
 // echo"**********************************************";
 
 // // on teste l'ajout
 
-// echo "ajout d'un Tickets" . '<br>';
-// $aNew = new Vehicules(["marqueVehicule" => "Opel", "modeleVehicule" => "CORSA", "immatriculationVehicule" => "AT-178-CP", "klmVehicule" => "257000", "idClient" => 1]);
-// var_dump($aNew);
-// VehiculesManager::add($aNew);
+echo "ajout d'un Tickets" . '<br>';
+$aNew = new Vehicules(["marqueVehicule" => "Opel", "modeleVehicule" => "CORSA", "immatriculationVehicule" => "AT-178-CP", "klmVehicule" => "257000", "idClient" => 1]);
+var_dump($aNew);
+VehiculesManager::add($aNew);
 
 // echo"**********************************************";
 

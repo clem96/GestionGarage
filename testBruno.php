@@ -51,13 +51,14 @@ DbConnect::Init();
 //var_dump($p);
 
 //On teste l'ajout
-//$ticket=TicketsManager::findById(1);
+//$ticket=ReparationsManager::findById(1);
 //$mode=ModesPaiementsManager::findById(1);  
 //var_dump($ticket);
 //var_dump($mode);
 //echo 'On ajoute un objet TVA <br>';
-//$pNew = new Reparations(["libelleReparation"=>"Embrayage","prixReparation"=>1000,"dateReparation"=>"2020-02-20","idVehicule"=>1,"idFacture"=>1]);
-//ReparationsManager::add($pNew);
+$pNew = new Reparations(["libelleReparation"=>"Embrayage","prixReparation"=>1000,"dateReparation"=>"2020-02-20","idVehicule"=>1,"idFacture"=>1]);
+var_dump($pNew);
+ReparationsManager::add($pNew);
 
 //On teste la suppression
 //echo 'On supprime un article <br>';
@@ -73,8 +74,8 @@ DbConnect::Init();
 
 //On affiche le liste des objets
 //echo 'On affiche la liste des objet <br>';
-$tableau=ReparationsManager::getList();
-var_dump($tableau);
+//$tableau=ReparationsManager::getList();
+//var_dump($tableau);
 //foreach($tableau as $elt)
 //{
 //	echo $elt->toString()."\n";
