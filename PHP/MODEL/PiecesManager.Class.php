@@ -3,7 +3,7 @@ class PiecesManager
 {
     public static function add($obj)
     {
-     $obj
+     
     }
     public static function upDate($obj)
     {
