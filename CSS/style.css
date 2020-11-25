@@ -1,4 +1,13 @@
 
+body{
+    display: flex;
+    flex-flow: column;
+}
+
+.page{
+    margin: 0 10em 0 10em;
+}
+
 img{
    height: 100%;
    margin: 0px;
@@ -17,6 +26,43 @@ div{
     display: flex;
 }
 
+.colonne{
+    flex-flow: column;
+}
+
+.row{
+flex-flow: row;
+}
+
 header{
     height: 15vh;
+}
+
+.info{
+    border: 1px solid black;
+}
+
+.paire{
+background-color: lightgrey;
+}
+
+.impaire{
+background-color: beige ;
+}
+
+button{
+    margin: 2em;
+    padding: 1em;
+}
+
+.couleur{
+background-color: lightblue;
+}
+
+.logo{
+    width: 5em;
+}
+
+footer{
+    height: 10em;
 }

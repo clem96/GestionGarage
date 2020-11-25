@@ -1,0 +1,13 @@
+{
+	"PublicFunction": {
+		"prefix": "pf",
+		"body": [
+		  "public function $1(){",
+		  "",
+		  "",
+		  "return ;",
+		  "}"
+		],
+		"description": "PublicFunction"
+	  }
+}
