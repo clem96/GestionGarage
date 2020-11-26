@@ -39,6 +39,7 @@ switch ($mode)
 
 </p></div><br>
 
+
 <div class="info colonne">
     <?php
     if ($mode=="edit")

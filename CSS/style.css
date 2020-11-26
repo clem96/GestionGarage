@@ -22,6 +22,10 @@ div{
     justify-content: center;
 }
 
+.centreVertical{
+    align-items:center;
+}
+
 .displayflex{
     display: flex;
 }
@@ -68,4 +72,11 @@ background-color: lightblue;
 
 footer{
     height: 10em;
+}
+
+
+/**************REPARATION***************/
+
+.titre{
+    text-align: center;
 }
