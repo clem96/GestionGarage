@@ -5,7 +5,7 @@
         </div>
 
         <div class="titre">
-            <h1>GARAGE "TRUC"</h1><br>
+            <h1>GARAGE CLEMENT</h1><br>
         <h3>
             <?php
             echo $titre;
