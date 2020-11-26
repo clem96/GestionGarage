@@ -56,20 +56,22 @@ DbConnect::Init();
 //var_dump($ticket);
 //var_dump($mode);
 //echo 'On ajoute un objet TVA <br>';
-$pNew = new Reparations(["libelleReparation"=>"Embrayage","prixReparation"=>1000,"dateReparation"=>"2020-02-20","idVehicule"=>1,"idFacture"=>1]);
-var_dump($pNew);
-ReparationsManager::add($pNew);
+//$pNew = new Reparations(["libelleReparation"=>"Pare Brise","prixReparation"=>1000,"dateReparation"=>"2020-02-20","idVehicule"=>1,"idFacture"=>1]);
+//var_dump($pNew);
+//ReparationsManager::add($pNew);
 
 //On teste la suppression
 //echo 'On supprime un article <br>';
-//$pSupp=PaiementsManager::findById(4);
-//PaiementsManager::delete($pSupp);
+//$pSupp=ReparationsManager::findById(8);
+//var_dump($pSupp);
+//ReparationsManager::delete($pSupp);
 
 
 //On teste la mise a jour
-//$pRecharge=PaiementsManager::findById(2);
-//$pRecharge->setPrixTtc(1000);
-//PaiementsManager::update($pRecharge);
+$pRecharge=ReparationsManager::findById(9);
+$pRecharge->setPrixReparation(450);
+var_dump($pRecharge);
+ReparationsManager::update($pRecharge);
 
 
 //On affiche le liste des objets

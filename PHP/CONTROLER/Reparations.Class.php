@@ -37,7 +37,7 @@ class Reparations
         return $this->_prixReparation;
     }
 
-    public function setPrixReparation($prixReparation)
+    public function setPrixReparation(float $prixReparation)
     {
         $this->_prixReparation = $prixReparation;
     }

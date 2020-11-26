@@ -51,7 +51,7 @@ CREATE TABLE reparations
         idReparation      Int Auto_increment  NOT NULL PRIMARY KEY,
         libelleReparation Varchar (50) NOT NULL ,
         prixReparation    Float NOT NULL ,
-        dateReparation    Date NOT NULL ,
+        dateReparation    Varchar (10) NOT NULL ,
         idVehicule        Int NOT NULL ,
         idFacture         Int NOT NULL
 )
