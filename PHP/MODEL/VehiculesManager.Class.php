@@ -1,8 +1,4 @@
 <?php
-
-
-
-
 class VehiculesManager
 {
  public static function add(Vehicules $obj)
