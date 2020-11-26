@@ -7,7 +7,16 @@ body{
 .page{
     margin: 0 10em 0 10em;
 }
-
+.contenu{
+    border-radius: 1em;
+    padding: 1em;
+    background-color: #EFEFEF;
+    margin: 0 10em 0 10em;
+    border: 2px dahed red;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
 img{
     max-height: 100%;
     max-width: 100%;
@@ -78,7 +87,13 @@ footer{
     height: 10em;
 }
 
-
+a {
+    text-decoration: none;
+}
+#cafe{
+    border-radius: 100%;
+    opacity: 0.9;
+}
 /**************REPARATION***************/
 
 .titre{
