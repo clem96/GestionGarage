@@ -1,4 +1,5 @@
 <?php
+echo '<div class="page">';
 
 $listeclient = ClientsManager::getList();
 echo'<div class="titre info centre"><p>Liste des clients</p></div><br>';
@@ -14,3 +15,4 @@ echo '<div class="impaire"><p><button><a href="index.php?codePage=formClient&mod
 echo '<div class="paire"><p><button><a href="index.php?codePage=formClient&mode=modif&id='.$unClient->getIdClient().'">Modification</a></button></p></div>';
 echo '<div class="impaire"><p><button><a href="index.php?codePage=formClient&mode=delete&id='.$unClient->getIdClient().'">Supression</a></button></p></div>';
 }
+echo '</div>';

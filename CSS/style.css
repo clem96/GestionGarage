@@ -3,16 +3,14 @@ body{
     display: flex;
     flex-flow: column;
 }
-
 .page{
-    margin: 0 10em 0 10em;
-}
-.contenu{
     border-radius: 1em;
     padding: 1em;
     background-color: #EFEFEF;
     margin: 0 10em 0 10em;
-    border: 2px dahed red;
+    flex-direction: column;
+}
+.page contenu{
     align-items: center;
     justify-content: center;
     flex-direction: column;
