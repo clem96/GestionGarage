@@ -1,7 +1,7 @@
 <body>
     <header>
         <div>
-            <img src="IMG/logo.jpg" alt="logo du garage">
+            <img src="IMG/logo.png" alt="logo du garage">
         </div>
 
         <div class="titre">
