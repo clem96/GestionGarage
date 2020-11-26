@@ -44,20 +44,18 @@ switch ($mode)
     <?php
     if ($mode=="edit")
     {
-    echo '<div class="paire"><p>Téléphone : '.$reparation->getTelreparation().'</p></div>';
-    echo '<div class="impaire"><p>Adresse : '.$reparation->getAdressereparation().'</p></div>';
-    echo '<div class="paire"><p>Code Postal : '.$reparation->getCpreparation().'</p></div>';
-    echo '<div class="impaire"><p>Ville : '.$reparation->getVillereparation().'</p></div>';
+   echo '<div class="paire"><p><label for="libelleReparation">Libelle de la reparation : </label><input name="libelleReparation" value="'.$reparation->getIdReparation().'"></p></div>';
+    echo '<div class="impaire"><p><label for="prixReparation">Prix de la reparation : </label><input name="prixReparation" value="'.$reparation->getPrixReparation().'"></p></div>';
+    echo '<div class="paire"><p><label for="dateReparation">Date de la reparation : </label><input name="dateReparation" value="'.$reparation->getDateReparation().'"></p></div>';
+    echo '<div class="impaire"><p><label for="idVehicule">Vehicule : </label><input name="idVehicule" value="'.$reparation->getIdVehicule().'"></p></div>';
     }
     else
     {
-    echo '<div class="paire"><p><label for="nomreparation">Nom : </label><input name="nomreparation" value="'.$reparation->getNomreparation().'"></p></div>';
-    echo '<div class="impaire"><p><label for="prenomreparation">Prenom : </label><input name="prenomreparation" value="'.$reparation->getPrenomreparation().'"></p></div>';
-    echo '<div class="paire"><p><label for="telreparation">Téléphone : </label><input name="telreparation" value="'.$reparation->getTelreparation().'"></p></div>';
-    echo '<div class="impaire"><p><label for="adressereparation">Adresse : </label><input name="adressereparation" value="'.$reparation->getAdressereparation().'"></p></div>';
-    echo '<div class="paire"><p><label for="cpreparation">Code Postal : </label><input name="cpreparation" value="'.$reparation->getCpreparation().'"></p></div>';
-    echo '<div class="impaire"><p><label for="villereparation">Ville : </label><input name="villereparation" value="'.$reparation->getVillereparation().'"></p></div>';
-}
+    echo '<div class="paire"><p>libelle : '.$reparation->getIdReparation().'</p></div>';
+    echo '<div class="impaire"><p>prix : '.$reparation->getPrixReparation().'</p></div>';
+    echo '<div class="paire"><p>Date de Reparation : '.$reparation->getdateReparation().'</p></div>';
+    echo '<div class="impaire"><p>Vehicule : '.$reparation->getIdVehicule().'</p></div>';
+} 
     ?>
 </div> 
 
@@ -71,7 +69,7 @@ switch ($mode)
         echo '    <button type="submit">Ajouter un reparation</button>';
         break;
     }
-    case "modif":   
+    case "edit":   
     {
         echo '    <button type="submit">Modifier les détails du reparation</button>';
         break;
