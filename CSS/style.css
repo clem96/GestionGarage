@@ -26,6 +26,10 @@ div{
     align-items:center;
 }
 
+.centre{
+    align-items: center;
+}
+
 .displayflex{
     display: flex;
 }

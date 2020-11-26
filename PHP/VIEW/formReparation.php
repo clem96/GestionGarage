@@ -44,19 +44,19 @@ switch ($mode)
     <?php
     if ($mode=="edit")
     {
-    echo '<div class="paire"><p>Téléphone : '.$client->getTelClient().'</p></div>';
-    echo '<div class="impaire"><p>Adresse : '.$client->getAdresseClient().'</p></div>';
-    echo '<div class="paire"><p>Code Postal : '.$client->getCpClient().'</p></div>';
-    echo '<div class="impaire"><p>Ville : '.$client->getVilleClient().'</p></div>';
+    echo '<div class="paire"><p>Téléphone : '.$reparation->getTelreparation().'</p></div>';
+    echo '<div class="impaire"><p>Adresse : '.$reparation->getAdressereparation().'</p></div>';
+    echo '<div class="paire"><p>Code Postal : '.$reparation->getCpreparation().'</p></div>';
+    echo '<div class="impaire"><p>Ville : '.$reparation->getVillereparation().'</p></div>';
     }
     else
     {
-    echo '<div class="paire"><p><label for="nomClient">Nom : </label><input name="nomClient" value="'.$client->getNomClient().'"></p></div>';
-    echo '<div class="impaire"><p><label for="prenomClient">Prenom : </label><input name="prenomClient" value="'.$client->getPrenomClient().'"></p></div>';
-    echo '<div class="paire"><p><label for="telClient">Téléphone : </label><input name="telClient" value="'.$client->getTelClient().'"></p></div>';
-    echo '<div class="impaire"><p><label for="adresseClient">Adresse : </label><input name="adresseClient" value="'.$client->getAdresseClient().'"></p></div>';
-    echo '<div class="paire"><p><label for="cpClient">Code Postal : </label><input name="cpClient" value="'.$client->getCpClient().'"></p></div>';
-    echo '<div class="impaire"><p><label for="villeClient">Ville : </label><input name="villeClient" value="'.$client->getVilleClient().'"></p></div>';
+    echo '<div class="paire"><p><label for="nomreparation">Nom : </label><input name="nomreparation" value="'.$reparation->getNomreparation().'"></p></div>';
+    echo '<div class="impaire"><p><label for="prenomreparation">Prenom : </label><input name="prenomreparation" value="'.$reparation->getPrenomreparation().'"></p></div>';
+    echo '<div class="paire"><p><label for="telreparation">Téléphone : </label><input name="telreparation" value="'.$reparation->getTelreparation().'"></p></div>';
+    echo '<div class="impaire"><p><label for="adressereparation">Adresse : </label><input name="adressereparation" value="'.$reparation->getAdressereparation().'"></p></div>';
+    echo '<div class="paire"><p><label for="cpreparation">Code Postal : </label><input name="cpreparation" value="'.$reparation->getCpreparation().'"></p></div>';
+    echo '<div class="impaire"><p><label for="villereparation">Ville : </label><input name="villereparation" value="'.$reparation->getVillereparation().'"></p></div>';
 }
     ?>
 </div> 
@@ -68,20 +68,20 @@ switch ($mode)
 {
     case "ajout":    
     {
-        echo '    <button type="submit">Ajouter un client</button>';
+        echo '    <button type="submit">Ajouter un reparation</button>';
         break;
     }
     case "modif":   
     {
-        echo '    <button type="submit">Modifier les détails du client</button>';
+        echo '    <button type="submit">Modifier les détails du reparation</button>';
         break;
     }
     case "delete":    
     {
-        echo '    <button type="submit">Supprimer le client</button>';
+        echo '    <button type="submit">Supprimer le reparation</button>';
         break;
     }
 }
-   echo '<button><a href="index.php?codePage=listeClient">Retour</a></button>
+   echo '<button><a href="index.php?codePage=listereparation">Retour</a></button>
 </form>';
 
