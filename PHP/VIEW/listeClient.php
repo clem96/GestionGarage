@@ -5,7 +5,6 @@ echo'<div class="titre info centre"><p>Liste des clients</p></div><br>';
 echo '<div class="info colonne">';
 echo '<div class="paire"><p><button><a href="index.php?codePage=formClient&mode=ajout">Ajouter un Client</a></button></p></div>';
 
-
 foreach ($listeclient as $unClient)
 {
 echo $unClient->getNomClient();
