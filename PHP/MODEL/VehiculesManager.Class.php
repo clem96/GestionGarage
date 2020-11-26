@@ -29,6 +29,12 @@ class VehiculesManager
  public static function delete(Vehicules $obj)
  {
      $db=DbConnect::getDb();
+
+     $idRep = ReparationsManager::getListByVehicule($obj);
+     foreach ($idRep as $uneReparation)
+     {
+         ReparationsManager::delete($uneReparation);
+     }
      $db->exec("DELETE FROM Vehicules WHERE idVehicule=".$obj->getIdVehicule());
  }
 
@@ -37,6 +43,7 @@ class VehiculesManager
      $db=DbConnect::getDb();
      $id = (int) $id;
      $q=$db->query("SELECT * FROM Vehicules WHERE idVehicule =".$id);
+     
      $results = $q->fetch(PDO::FETCH_ASSOC);
      if($results != false)
      {

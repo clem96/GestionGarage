@@ -17,7 +17,7 @@
 
 include "DbConnect.Class.php";
 include "VehiculesManager.Class.php";
-include "../CONTROLER/Vehicules.Class.php";
+include "../CONTROLLER/Vehicules.Class.php";
 
 DbConnect::init();
 
@@ -25,30 +25,30 @@ DbConnect::init();
 
 // echo"**********************************************";
 
-// // on teste la recherche par ID
-// echo 'recherche id = 3' . '<br>';
-// $p = VehiculesManager::findById(3);
-// var_dump($p);
+// on teste la recherche par ID
+echo 'recherche id = 3' . '<br>';
+$p = VehiculesManager::findById(5);
+var_dump($p);
 
 
 // echo"**********************************************";
 
 // // on teste l'ajout
 
-echo "ajout d'un Tickets" . '<br>';
-$aNew = new Vehicules(["marqueVehicule" => "Opel", "modeleVehicule" => "CORSA", "immatriculationVehicule" => "AT-178-CP", "klmVehicule" => "257000", "idClient" => 1]);
-var_dump($aNew);
-VehiculesManager::add($aNew);
+// echo "ajout d'un Tickets" . '<br>';
+// $aNew = new Vehicules(["marqueVehicule" => "Opel", "modeleVehicule" => "CORSA", "immatriculationVehicule" => "AT-178-CP", "klmVehicule" => 257000, "idClient" => 1]);
+// var_dump($aNew);
+// VehiculesManager::add($aNew);
 
 // echo"**********************************************";
 
-//on affiche la liste des produits
-// echo "Liste des articles" . '<br>';
-// $tableau = TicketsManager::getList();
-// foreach ($tableau as $unProduit)
-// {
-//     echo $unProduit->toString() . '<br>';
-// }
+// on affiche la liste des produits
+echo "Liste des articles" . '<br>';
+$tableau = VehiculesManager::getList();
+foreach ($tableau as $unVehicule)
+{
+    echo $unVehicule->toString() . '<br>';
+}
 
 // echo"**********************************************";
 
@@ -59,9 +59,9 @@ VehiculesManager::add($aNew);
 // $pRecharge = TicketsManager::findById(2);
 
 // on teste la suppression
-// echo "on supprime un article" . '<br>';
-// $pSuppr = TicketsManager::findById(3);
-// TicketsManager::delete($pSuppr);
+echo "on supprime un article" . '<br>';
+$pSuppr = VehiculesManager::findById(2);
+VehiculesManager::delete($pSuppr);
 
 
 // //on affiche la liste des produits

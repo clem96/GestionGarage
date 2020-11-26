@@ -33,11 +33,11 @@ switch ($mode)
 
 
 ?>
- <div class="titre info centre"><p>
+ <div class="titre info centre"><p><strong>
      
- <?php echo $client->getNomClient()."".$client->getPrenomClient();?>
+ <?php echo $client->getNomClient()."  ".$client->getPrenomClient();?>
 
-</p></div><br>
+</strong></p></div><br>
 
 
 <div class="info colonne">
