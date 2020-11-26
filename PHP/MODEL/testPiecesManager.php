@@ -2,6 +2,7 @@
 require 'PiecesManager.Class.php';
 require '../CONTROLER/Pieces.Class.php';
 require 'DbConnect.Class.php';
+
 $db = DbConnect::init();
 
 

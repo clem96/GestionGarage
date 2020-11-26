@@ -64,4 +64,19 @@ class ReparationsManager
 		}
 		return $liste;
 	}
+
+	public static function getListByVehicule(Vehicules $obj)
+	{
+ 		$db=DbConnect::getDb();
+		$liste = [];
+		$q = $db->query("SELECT * FROM Reparations WHERE idVehicule =".$obj->getIdVehicule());
+		while($donnees = $q->fetch(PDO::FETCH_ASSOC))
+		{
+			if($donnees != false)
+			{
+				$liste[] = new Reparations($donnees);
+			}
+		}
+		return $liste;
+	}
 }
