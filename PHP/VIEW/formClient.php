@@ -33,23 +33,20 @@ switch ($mode)
 
 
 ?>
+ <div class="titre info centre"><p>
+     
+ <?php echo $client->getNomClient()."".$client->getPrenomClient();?>
 
-    <div>
-        <label for="nomClient">Nom</label>
-        <input name="nomClient" <?php if ($mode !="ajout") { echo 'value="'.$client->getNomClient().'"';} if ($mode=="delete" || $mode=="edit") echo 'disabled'; ?>/>
-    </div>
-    <div class="espace"></div>
-     <div>
-     <label for="prenomClient">Prenom</label>
-     <input name="prenomClient"  <?php if ($mode !="ajout") { echo 'value="'.$client->getPrenomClient().'"';} if ($mode=="delete" || $mode=="edit") echo 'disabled'; ?> />
-     </div>
-     <div class="espace"></div>
-     <div>
-         <label for="adresseClient">Adresse</label>
-         <input name="adresseClient" <?php if ($mode !="ajout") { echo 'value="'.$client->getAdresseClient().'"';} if ($mode=="delete" || $mode=="edit") echo 'disabled'; ?> />
-     </div>
-     <div class="espace"></div>
-    <div></div>
+</p></div><br>
+
+<div class="info colonne">
+    <div class="paire"><p><?php echo "Téléphone : ".$client->getTelClient();?></p></div>
+    <div class="impaire"><p><?php echo "Adresse : ".$client->getAdresseClient();?></p></div>
+    <div class="paire"><p><?php echo "Code Postal : ".$client->getCpClient();?></p></div>
+    <div class="impaire"><p><?php echo "Ville : ".$client->getVilleClient();?></p></div>
+</div> 
+
+    
   
 <?php
  switch ($mode)
