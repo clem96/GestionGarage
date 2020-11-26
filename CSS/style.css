@@ -22,6 +22,10 @@ div{
     justify-content: center;
 }
 
+.centreVertical{
+    align-items:center;
+}
+
 .displayflex{
     display: flex;
 }
