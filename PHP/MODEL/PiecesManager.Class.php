@@ -1,7 +1,7 @@
 <?php
 class PiecesManager
 {
-    public static function add($obj)
+    public static function add(Pieces $obj)
     {
         $db = DbConnect::getDb();
         $q = $db->prepare("INSERT INTO pieces (idPiece, libellePiece, prixPiece) VALUES (:id, :libelle, :prix)");
@@ -10,7 +10,7 @@ class PiecesManager
         $q->bindvalue(":prix", $obj->getPrix());
     }
 
-    public static function upDate($obj)
+    public static function upDate(Pieces $obj)
     {
         $db = DbConnect::getDb();
         $q = $db->prepare("UPDATE `pieces` SET `idPiece`=:id, libellePiece=:libelle, prixPiece=:prix");
@@ -19,10 +19,10 @@ class PiecesManager
         $q->bindvalue(":prix", $obj->getPrix());
     }
 
-    public static function delete($obj)
+    public static function delete(Pieces $obj)
     {
         $db = DbConnect::getDb();
-        $db->exec("DELETE FROM pieces WHERE idPiece = " . $obj->getIdPiece());
+        $db->exec("DELETE FROM Pieces WHERE idPiece = " . $obj->getIdPiece());
     }
 
     public static function getList()
@@ -38,7 +38,7 @@ class PiecesManager
 
     }
 
-    public static function findById($id)
+    public static function findById(Pieces $id)
     {
         $db = DbConnect::getDb();
         $id = (int) $id;

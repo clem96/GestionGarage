@@ -17,7 +17,15 @@
 
 include "DbConnect.Class.php";
 include "VehiculesManager.Class.php";
+include "ReparationsManager.Class.php"; 
+include "InterventionsManager.Class.php";
+include "FacturesManager.Class.php"; 
 include "../CONTROLLER/Vehicules.Class.php";
+include "../CONTROLLER/Reparations.Class.php";
+include "../CONTROLLER/Interventions.Class.php";
+include "../CONTROLLER/Factures.Class.php";
+
+
 
 DbConnect::init();
 
@@ -27,7 +35,7 @@ DbConnect::init();
 
 // on teste la recherche par ID
 echo 'recherche id = 3' . '<br>';
-$p = VehiculesManager::findById(5);
+$p = VehiculesManager::findById(1);
 var_dump($p);
 
 
@@ -35,10 +43,10 @@ var_dump($p);
 
 // // on teste l'ajout
 
-// echo "ajout d'un Tickets" . '<br>';
-// $aNew = new Vehicules(["marqueVehicule" => "Opel", "modeleVehicule" => "CORSA", "immatriculationVehicule" => "AT-178-CP", "klmVehicule" => 257000, "idClient" => 1]);
-// var_dump($aNew);
-// VehiculesManager::add($aNew);
+echo "ajout d'un Tickets" . '<br>';
+$aNew = new Vehicules(["marqueVehicule" => "Opel", "modeleVehicule" => "CORSA", "immatriculationVehicule" => "AT-178-CP", "klmVehicule" => 257000, "idClient" => 1]);
+var_dump($aNew);
+VehiculesManager::add($aNew);
 
 // echo"**********************************************";
 
@@ -59,9 +67,9 @@ foreach ($tableau as $unVehicule)
 // $pRecharge = TicketsManager::findById(2);
 
 // on teste la suppression
-echo "on supprime un article" . '<br>';
-$pSuppr = VehiculesManager::findById(2);
-VehiculesManager::delete($pSuppr);
+// echo "on supprime un article" . '<br>';
+// $pSuppr = VehiculesManager::findById(1);
+// VehiculesManager::delete($pSuppr);
 
 
 // //on affiche la liste des produits

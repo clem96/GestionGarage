@@ -25,7 +25,13 @@ class InterventionsManager
 	}
 	public static function delete(Interventions $obj)
 	{
- 		$db=DbConnect::getDb();
+		 $db=DbConnect::getDb();
+
+		//  $idRep = PiecesManager::getListByVehicule($obj);
+     	// foreach ($idRep as $uneReparation)
+     	// {
+        // 	ReparationsManager::delete($uneReparation);
+     	// }
 		$db->exec("DELETE FROM Interventions WHERE idIntervention=" .$obj->getIdIntervention());
 	}
 	public static function findById($id)
@@ -53,6 +59,22 @@ class InterventionsManager
 			if($donnees != false)
 			{
 				$liste[] = new Interventions ($donnees);
+			}
+		}
+		return $liste;
+	}
+
+	public static function getListByReparation(Reparations $obj)
+	{
+ 		$db=DbConnect::getDb();
+		$liste = [];
+		$q = $db->query("SELECT * FROM Interventions WHERE idReparation =".$obj->getIdReparation());
+
+		while($donnees = $q->fetch(PDO::FETCH_ASSOC))
+		{
+			if($donnees != false)
+			{
+				$liste[] = new Interventions($donnees);
 			}
 		}
 		return $liste;

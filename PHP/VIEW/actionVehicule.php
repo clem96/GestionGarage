@@ -2,6 +2,8 @@
 
 $vehicule = new Vehicules($_POST);
 $mode = $_GET['mode'];
+var_dump($vehicule);
+var_dump($mode);
 switch ($mode)
 {
     case "ajout":

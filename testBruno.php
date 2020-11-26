@@ -37,8 +37,8 @@ spl_autoload_register("chargerClasse");
 
 
 */
-include "PHP/CONTROLER/Factures.Class.php";
-include "PHP/MODEL/FacturesManager.Class.php";
+include "PHP/CONTROLLER/Vehicules.Class.php";
+include "PHP/MODEL/VehiculesManager.Class.php";
 include "PHP/MODEL/DbConnect.Class.php";
 
 DbConnect::Init();
@@ -56,15 +56,15 @@ DbConnect::Init();
 //var_dump($ticket);
 //var_dump($mode);
 //echo 'On ajoute un objet TVA <br>';
-//$pNew = new Factures(["dateFacture"=>"2020-12-20"]);
+//$pNew = new vehicules(["marqueVehicule"=>"Renault","modeleVehicule"=>"Dauphine","immatriculationVehicule"=>"AN-534-KP","klmVehicule"=>3000,"idClient"=>1]);
 //var_dump($pNew);
-//FacturesManager::add($pNew);
+//VehiculesManager::add($pNew);
 
 //On teste la suppression
 //echo 'On supprime un article <br>';
-//$pSupp=FacturesManager::findById(6);
-//var_dump($pSupp);
-//FacturesManager::delete($pSupp);
+$pSupp=VehiculesManager::findById(5);
+var_dump($pSupp);
+VehiculesManager::delete($pSupp);
 
 
 //On teste la mise a jour
@@ -76,12 +76,12 @@ DbConnect::Init();
 
 //On affiche le liste des objets
 //echo 'On affiche la liste des objet <br>';
-/*$tableau=FacturesManager::getList();
-var_dump($tableau);
-foreach($tableau as $elt)
-{
-	echo $elt->toString()."\n";
-}*/
+//$tableau=VehiculesManager::getList();
+//var_dump($tableau);
+//foreach($tableau as $elt)
+//{
+//	echo $elt->toString()."\n";
+//}
 //include "PHP/VIEW/Footer.php";
 
 ?>

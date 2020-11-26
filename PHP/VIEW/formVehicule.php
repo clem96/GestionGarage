@@ -1,6 +1,5 @@
 <?php
 $mode = $_GET['mode'];
-var_dump($mode);
 if (isset($_GET['id']))  // si l'id est renseigné
 {
     $idRecu = $_GET['id'];
@@ -28,7 +27,6 @@ switch ($mode)
     case "edit":    { //il n'y a pas d'action sur le formulaire, juste le bouton retour
         echo '<form >  
     <input name="idVehicule"  value="' . $vehicule->getIdVehicule() . '" type="hidden" />';
-    echo"Mode EDIT";
         break;
     }
 }
@@ -39,24 +37,29 @@ switch ($mode)
 
 </div>
 
-    <div>
-        <label for="marqueVehicule">Marque</label>
-        <input name="marqueVehicule" <?php if ($mode !="ajout") { echo 'value="'.$vehicule->getMarqueVehicule().'"';} if ($mode=="delete" || $mode=="edit") echo 'disabled'; ?>/>
+    <div class="paire">
+        <div></div>
+        <div><label for="marqueVehicule">Marque</label></div>
+        <div><input name="marqueVehicule" <?php if ($mode !="ajout") { echo 'value="'.$vehicule->getMarqueVehicule().'"';} if ($mode=="delete" || $mode=="edit") echo 'disabled'; ?>/></div>
+        <div></div>
     </div>
-    <div class="espace"></div>
-    <div>
-        <label for="modeleVehicule">Modele</label>
-        <input name="modeleVehicule"  <?php if ($mode !="ajout") { echo 'value="'.$vehicule->getModeleVehicule().'"';} if ($mode=="delete" || $mode=="edit") echo 'disabled'; ?> />
+    <div class="impaire">
+        <div></div>
+        <div><label for="modeleVehicule">Modele</label></div>
+        <div><input name="modeleVehicule"  <?php if ($mode !="ajout") { echo 'value="'.$vehicule->getModeleVehicule().'"';} if ($mode=="delete" || $mode=="edit") echo 'disabled'; ?> /></div>
+        <div></div>
     </div>
-    <div class="espace"></div>
-    <div>
-        <label for="immatriculationVehicule">Immatriculation</label>
-        <input name="immatriculationVehicule" <?php if ($mode !="ajout") { echo 'value="'.$vehicule->getImmatriculationVehicule().'"';} if ($mode=="delete" || $mode=="edit") echo 'disabled'; ?> />
+    <div class="paire">
+        <div></div>
+        <div><label for="immatriculationVehicule">Immatriculation</label></div>
+        <div><input name="immatriculationVehicule" <?php if ($mode !="ajout") { echo 'value="'.$vehicule->getImmatriculationVehicule().'"';} if ($mode=="delete" || $mode=="edit") echo 'disabled'; ?> /></div>
+        <div></div>
     </div>
-    <div class="espace"></div>
-    <div>
-        <label for="klmVehicule">Kilometrage</label>
-        <input name="klmVehicule" <?php if ($mode !="ajout") { echo 'value="'.$vehicule->getKlmVehicule().'"'; } else{echo 'value=""';} if ($mode=="delete" || $mode=="edit") echo 'disabled'; ?>  />
+    <div class="impaire">
+        <div></div>
+        <div><label for="klmVehicule">Kilometrage</label></div>
+        <div><input name="klmVehicule" <?php if ($mode !="ajout") { echo 'value="'.$vehicule->getKlmVehicule().'"'; } else{echo 'value=""';} if ($mode=="delete" || $mode=="edit") echo 'disabled'; ?> /></div>
+        <div></div>
     </div>
     <input name="idClient" <?php if ($mode !="ajout") { echo 'value="'.$vehicule->getIdClient().'"';} else{echo 'value="1"';}  ?>   type="hidden" >
 
