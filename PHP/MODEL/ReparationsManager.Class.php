@@ -1,4 +1,5 @@
 <?php
+
 class ReparationsManager
 {
 	public static function add(Reparations $obj)
@@ -31,6 +32,20 @@ class ReparationsManager
  	public static function delete(Reparations $obj)
  	{
 		$db=DbConnect::getDb();
+		
+		$idFac = FacturesManager::getListByReparation($obj);
+     	foreach ($idFac as $uneFacture)
+     	{
+         	FacturesManager::delete($uneFacture);
+		}
+
+	
+		$idInter = InterventionsManager::getListByReparation($obj);
+		foreach ($idInter as $uneIntervention)
+		{
+			InterventionsManager::delete($uneIntervention);
+		}
+
 		$db->exec("DELETE FROM Reparations WHERE idReparation=".$obj->getIdReparation());
  	}
 

@@ -1,5 +1,6 @@
 
 body{
+    background: url(../IMG/body.jpg) no-repeat fixed;
     display: flex;
     flex-flow: column;
 }
@@ -50,6 +51,7 @@ flex-flow: row;
 }
 
 header{
+    background-image: url(../IMG/fond.png);
     justify-content: space-evenly;
     display: flex;
     height: 39vh;
