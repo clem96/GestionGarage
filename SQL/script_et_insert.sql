@@ -42,7 +42,7 @@ ENGINE=INNODB DEFAULT CHARSET=UTF8;
 CREATE TABLE factures
 (
         idFacture   Int Auto_increment  NOT NULL PRIMARY KEY,
-        dateFacture Date NOT NULL
+        dateFacture Varchar (10) NOT NULL
 )
 ENGINE=INNODB DEFAULT CHARSET=UTF8;
 
