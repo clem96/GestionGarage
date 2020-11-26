@@ -40,10 +40,24 @@ switch ($mode)
 </p></div><br>
 
 <div class="info colonne">
-    <div class="paire"><p><?php echo "Téléphone : ".$client->getTelClient();?></p></div>
-    <div class="impaire"><p><?php echo "Adresse : ".$client->getAdresseClient();?></p></div>
-    <div class="paire"><p><?php echo "Code Postal : ".$client->getCpClient();?></p></div>
-    <div class="impaire"><p><?php echo "Ville : ".$client->getVilleClient();?></p></div>
+    <?php
+    if ($mode=="edit")
+    {
+    echo '<div class="paire"><p>Téléphone : '.$client->getTelClient().'</p></div>';
+    echo '<div class="impaire"><p>Adresse : '.$client->getAdresseClient().'</p></div>';
+    echo '<div class="paire"><p>Code Postal : '.$client->getCpClient().'</p></div>';
+    echo '<div class="impaire"><p>Ville : '.$client->getVilleClient().'</p></div>';
+    }
+    else
+    {
+    echo '<div class="paire"><p><label for="nomClient">Nom : </label><input name="nomClient" value="'.$client->getNomClient().'"></p></div>';
+    echo '<div class="impaire"><p><label for="prenomClient">Prenom : </label><input name="prenomClient" value="'.$client->getPrenomClient().'"></p></div>';
+    echo '<div class="paire"><p><label for="telClient">Téléphone : </label><input name="telClient" value="'.$client->getTelClient().'"></p></div>';
+    echo '<div class="impaire"><p><label for="adresseClient">Adresse : </label><input name="adresseClient" value="'.$client->getAdresseClient().'"></p></div>';
+    echo '<div class="paire"><p><label for="cpClient">Code Postal : </label><input name="cpClient" value="'.$client->getCpClient().'"></p></div>';
+    echo '<div class="impaire"><p><label for="villeClient">Ville : </label><input name="villeClient" value="'.$client->getVilleClient().'"></p></div>';
+}
+    ?>
 </div> 
 
     
