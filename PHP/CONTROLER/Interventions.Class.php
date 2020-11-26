@@ -4,20 +4,21 @@ class Interventions
 {
   
     /*****************Attributs***************** */
-    private $_idPieces;
+    private $_idIntervention;
+    private $_idPiece;
     private $_idReparation;
     private $_quantitePiece;
 
     /*****************Accesseurs***************** */
     
-    public function getIdPieces()
+    public function getIdPiece()
     {
-        return $this->_idPieces;
+        return $this->_idPiece;
     }
 
-    public function setIdPieces($idPieces)
+    public function setIdPiece($idPiece)
     {
-        $this->_idPieces = $idPieces;
+        $this->_idPiece = $idPiece;
     }
     
     public function getIdReparation()
@@ -38,6 +39,16 @@ class Interventions
     public function setQuantitePiece($quantitePiece)
     {
         $this->_quantitePiece = $quantitePiece;
+    }
+    
+    public function getIdIntervention()
+    {
+        return $this->_idIntervention;
+    }
+
+    public function setIdIntervention($idIntervention)
+    {
+        $this->_idIntervention = $idIntervention;
     }
     /*****************Constructeur***************** */
 
@@ -69,7 +80,7 @@ class Interventions
      */
     public function toString()
     {
-        return "idReparation : ". $this->getIdReparation()."idPiece : ". $this->getIdPieces()."QuantitePiece : ". $this->getQuantitePiece();
+        return "idReparation : ". $this->getIdReparation()."idPiece : ". $this->getIdPiece()."QuantitePiece : ". $this->getQuantitePiece();
     }
 
     /**
@@ -98,7 +109,4 @@ class Interventions
     }
 
    
-
- 
-
 }
