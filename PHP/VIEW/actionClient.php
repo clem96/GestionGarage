@@ -22,4 +22,4 @@ switch ($mode)
         }
 }
 
-header("location: index.php?codePage=listeHotel");
+header("location: index.php?codePage=listeClient");
