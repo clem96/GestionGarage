@@ -13,7 +13,7 @@ echo'<div class="info colonne">';
     echo'<div class="elm colonne centre">';
         echo '<div><p>Prix de la reparation : '.$uneReparation->getPrixReparation().'</p></div>';
         echo '<div><p>Date de la reparation : '.$uneReparation->getDateReparation().'</p></div>';
-        echo '<div><p>Code Postal : '.$uneReparation->getIdVehicule().'</p></div>';
+        echo '<div><p>Vehicule : '.$uneReparation->getIdVehicule().'</p></div>';
         echo'<button><a href="index.php?codePage=formReparation&mode=edit&id='.$uneReparation->getIdReparation().'">Modifier</a></button>';
         echo'<button><a href="index.php?codePage=formReparation&mode=delete&id='.$uneReparation->getIdReparation().'">Supprimer</a></button>';
     echo '</div>';
