@@ -21,13 +21,17 @@ class Factures
 
     public function getDateFacture()
     {
-        return $this->_date;
+        return $this->_dateFacture;
     }
 
-    public function setDateFacture(dateTime $date)
+ 
+    public function setDateFacture($dateFacture)
     {
-        $this->_date = $date;
+        $this->_dateFacture = $dateFacture;
+
+        return $this;
     }
+    
     
     /*****************Constructeur***************** */
 
@@ -59,6 +63,8 @@ class Factures
      */
     public function toString()
     {
-        return $this->getIdFacture()." - ".$this->getDateFacture()->format("d-m-Y");
+        return $this->getIdFacture()." - ".$this->getDateFacture();
     }
+
+    
 }

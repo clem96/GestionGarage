@@ -37,8 +37,8 @@ spl_autoload_register("chargerClasse");
 
 
 */
-include "PHP/CONTROLER/Reparations.Class.php";
-include "PHP/MODEL/ReparationsManager.Class.php";
+include "PHP/CONTROLER/Factures.Class.php";
+include "PHP/MODEL/FacturesManager.Class.php";
 include "PHP/MODEL/DbConnect.Class.php";
 
 DbConnect::Init();
@@ -47,7 +47,7 @@ DbConnect::Init();
 
 //On teste la recherche par ID
 //echo 'Recherche de id=1 <br>';
-//$p=PaiementsManager::findById(1);
+//$p=FacturesManager::findById(2);
 //var_dump($p);
 
 //On teste l'ajout
@@ -56,32 +56,32 @@ DbConnect::Init();
 //var_dump($ticket);
 //var_dump($mode);
 //echo 'On ajoute un objet TVA <br>';
-//$pNew = new Reparations(["libelleReparation"=>"Pare Brise","prixReparation"=>1000,"dateReparation"=>"2020-02-20","idVehicule"=>1,"idFacture"=>1]);
+//$pNew = new Factures(["dateFacture"=>"2020-12-20"]);
 //var_dump($pNew);
-//ReparationsManager::add($pNew);
+//FacturesManager::add($pNew);
 
 //On teste la suppression
 //echo 'On supprime un article <br>';
-//$pSupp=ReparationsManager::findById(8);
+//$pSupp=FacturesManager::findById(6);
 //var_dump($pSupp);
-//ReparationsManager::delete($pSupp);
+//FacturesManager::delete($pSupp);
 
 
 //On teste la mise a jour
-$pRecharge=ReparationsManager::findById(9);
-$pRecharge->setPrixReparation(450);
-var_dump($pRecharge);
-ReparationsManager::update($pRecharge);
+//$pRecharge=FacturesManager::findById(5);
+//$pRecharge->setDateFacture("2020-12-26");
+//var_dump($pRecharge);
+//FacturesManager::update($pRecharge);
 
 
 //On affiche le liste des objets
 //echo 'On affiche la liste des objet <br>';
-//$tableau=ReparationsManager::getList();
-//var_dump($tableau);
-//foreach($tableau as $elt)
-//{
-//	echo $elt->toString()."\n";
-//}
+/*$tableau=FacturesManager::getList();
+var_dump($tableau);
+foreach($tableau as $elt)
+{
+	echo $elt->toString()."\n";
+}*/
 //include "PHP/VIEW/Footer.php";
 
 ?>
