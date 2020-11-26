@@ -1,5 +1,8 @@
 <?php
 
+
+
+
 class VehiculesManager
 {
  public static function add(Vehicules $obj)
@@ -33,7 +36,7 @@ class VehiculesManager
      $idRep = ReparationsManager::getListByVehicule($obj);
      foreach ($idRep as $uneReparation)
      {
-         ReparationsManager::delete($uneReparation);
+        ReparationsManager::delete($uneReparation);
      }
      $db->exec("DELETE FROM Vehicules WHERE idVehicule=".$obj->getIdVehicule());
  }

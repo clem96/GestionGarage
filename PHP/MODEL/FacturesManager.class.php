@@ -41,12 +41,28 @@ class FacturesManager
 			return false;
 		}
 	}
+	
 
     public static function getList()
 	{
  		$db=DbConnect::getDb();
 		$liste = [];
 		$q = $db->query("SELECT * FROM factures");
+		while($donnees = $q->fetch(PDO::FETCH_ASSOC))
+		{
+			if($donnees != false)
+			{
+				$liste[] = new Factures($donnees);
+			}
+		}
+		return $liste;
+	}
+
+	public static function getListByReparation(Reparations $obj)
+	{
+ 		$db=DbConnect::getDb();
+		$liste = [];
+		$q = $db->query("SELECT * FROM factures WHERE idFacture=".$obj->getIdFacture());
 		while($donnees = $q->fetch(PDO::FETCH_ASSOC))
 		{
 			if($donnees != false)
