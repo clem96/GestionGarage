@@ -59,7 +59,7 @@ class Vehicules
         return $this->_klmVehicule;
     }
 
-    public function setKlmVehicule($klmVehicule)
+    public function setKlmVehicule(int $klmVehicule)
     {
         $this->_klmVehicule = $klmVehicule;
     }
@@ -69,7 +69,7 @@ class Vehicules
         return $this->_idClient;
     }
 
-    public function setIdClient($idClient)
+    public function setIdClient(int $idClient)
     {
         $this->_idClient = $idClient;
     }
