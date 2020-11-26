@@ -39,6 +39,7 @@ switch ($mode)
 
 </p></div><br>
 
+
 <div class="info colonne">
     <div class="paire"><p><?php echo "Téléphone : ".$client->getTelClient();?></p></div>
     <div class="impaire"><p><?php echo "Adresse : ".$client->getAdresseClient();?></p></div>
