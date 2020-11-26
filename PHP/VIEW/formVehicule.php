@@ -65,6 +65,9 @@ switch ($mode)
 
 
 <?php
+echo '  <div>
+        <div></div>
+        <div>';
  switch ($mode)
 {
     case "ajout":    
@@ -84,4 +87,19 @@ switch ($mode)
     }
 }
    echo '<button><a href="index.php?codePage=listeVehicule">Retour</a></button>
-</form>';
+   </div>
+   <div></div>
+   </div>
+   </form>';
+
+   foreach ($listevehicules as $unVehicule)
+   {
+        if($cmp%2==0)
+        {
+            echo '<div class="impaire centre centreVertical">';
+        }
+        else
+        {
+            echo '<div class="paire centre centreVertical">';
+        }
+   }
