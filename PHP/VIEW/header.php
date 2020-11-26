@@ -5,9 +5,12 @@
         </div>
 
         <div class="titre">
+            <h1>GARAGE "TRUC"</h1><br>
+        <h3>
             <?php
             echo $titre;
             ?>
-            </div>
+            </h3></div>
+         <div></div>
 
     </header>

@@ -1,2 +1,2 @@
 <?php
-echo '<div class="contenu">Bonjour. Bienvenue au garage !</div>';
+echo '<div class="page"><div class="centre"><br><br>Bonjour. Bienvenue au garage ! <br><br>La qualité de notre main-d\'oeuvre vous bluffera. Satisfait ou remboursé ! <br>Nous vous proposons nos services dans le monde entier, à des prix imbattables. <br><br>N\'attendez plus !<br><br> En plus, le café est offert.</div></div>';
