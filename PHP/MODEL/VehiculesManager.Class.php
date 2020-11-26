@@ -29,7 +29,12 @@ class VehiculesManager
  public static function delete(Vehicules $obj)
  {
      $db=DbConnect::getDb();
+     $idRep[] = $db->exec("SELECT idReparation FROM reparations WHERE idVehicule=".$obj->getIdVehicule());
+     var_dump ($idRep);
+     $db->exec("DELETE FROM Interventions WHERE idVehicule=".$obj->getIdVehicule());
+     $db->exec("DELETE FROM Reparations WHERE idVehicule=".$obj->getIdVehicule());
      $db->exec("DELETE FROM Vehicules WHERE idVehicule=".$obj->getIdVehicule());
+
  }
 
  public static function findById($id)
@@ -37,6 +42,7 @@ class VehiculesManager
      $db=DbConnect::getDb();
      $id = (int) $id;
      $q=$db->query("SELECT * FROM Vehicules WHERE idVehicule =".$id);
+     
      $results = $q->fetch(PDO::FETCH_ASSOC);
      if($results != false)
      {
