@@ -7,8 +7,9 @@ class VehiculesManager
 {
  public static function add(Vehicules $obj)
  {
+     var_dump($obj);
      $db=DbConnect::getDb();
-     $q=$db->prepare("INSERT INTO Vehicules (marqueVehicule,modeleVehicule,immatriculationVehicule,klmVehicule,idClient) VALUE (:marqueVehicule,:modeleVehicule,:immatriculationVehicule,:klmVehicule,:idClient");
+     $q=$db->prepare("INSERT INTO Vehicules (marqueVehicule,modeleVehicule,immatriculationVehicule,klmVehicule,idClient) VALUE (:marqueVehicule,:modeleVehicule,:immatriculationVehicule,:klmVehicule,:idClient)");
      $q->bindValue(":marqueVehicule", $obj->getMarqueVehicule());
      $q->bindValue(":modeleVehicule", $obj->getModeleVehicule());
      $q->bindValue(":immatriculationVehicule", $obj->getImmatriculationVehicule());
@@ -21,6 +22,7 @@ class VehiculesManager
  {
      $db=DbConnect::getDb();
      $q=$db->prepare("UPDATE Vehicules SET marqueVehicule=:marqueVehicule,modeleVehicule=:modeleVehicule,immatriculationVehicule=:immatriculationVehicule,klmVehicule=:klmVehicule,idClient=:idClient WHERE idVehicule=:idVehicule");
+     $q->bindValue(":idVehicule", $obj->getIdVehicule());
      $q->bindValue(":marqueVehicule", $obj->getMarqueVehicule());
      $q->bindValue(":modelVehicule", $obj->getModeleVehicule());
      $q->bindValue(":immatriculationVehicule", $obj->getImmatriculationVehicule());

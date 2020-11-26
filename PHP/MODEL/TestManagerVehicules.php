@@ -38,25 +38,24 @@ echo 'recherche id = 3' . '<br>';
 $p = VehiculesManager::findById(1);
 var_dump($p);
 
-
 // echo"**********************************************";
 
 // // on teste l'ajout
 
-echo "ajout d'un Tickets" . '<br>';
-$aNew = new Vehicules(["marqueVehicule" => "Opel", "modeleVehicule" => "CORSA", "immatriculationVehicule" => "AT-178-CP", "klmVehicule" => 257000, "idClient" => 1]);
+echo "ajout d'une Voiture" . '<br>';
+$aNew = new Vehicules(["idVehicule" => NULL,"marqueVehicule" => "Opel", "modeleVehicule" => "CORSA", "immatriculationVehicule" => "AT-178-CP", "klmVehicule" => '7000', "idClient" => '1']);
 var_dump($aNew);
 VehiculesManager::add($aNew);
 
 // echo"**********************************************";
 
 // on affiche la liste des produits
-echo "Liste des articles" . '<br>';
-$tableau = VehiculesManager::getList();
-foreach ($tableau as $unVehicule)
-{
-    echo $unVehicule->toString() . '<br>';
-}
+// echo "Liste des articles" . '<br>';
+// $tableau = VehiculesManager::getList();
+// foreach ($tableau as $unVehicule)
+// {
+//     echo $unVehicule->toString() . '<br>';
+// }
 
 // echo"**********************************************";
 
