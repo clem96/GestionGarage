@@ -34,9 +34,9 @@ $routes = [
     "formClient" => ["PHP/VIEW/", "FormClient", "Détail du client"],
     "actionClient" => ["PHP/VIEW/", "ActionClient", "Modification du client"],
 
-    "listeVehicule" => ["PHP/VIEW/", "ListeVehicule", "Liste des vehicules"],
-    "formVehicule" => ["PHP/VIEW/", "FormVehicule", "Détail du vehicule"],
-    "actionVehicule" => ["PHP/VIEW/", "ActionVehicule", "Modification du vehicule"],
+    "listeVehicule" => ["PHP/VIEW/", "listeVehicule", "Liste des vehicules"],
+    "formVehicule" => ["PHP/VIEW/", "formVehicule", "Détail du vehicule"],
+    "actionVehicule" => ["PHP/VIEW/", "actionVehicule", "Modification du vehicule"],
 
     "listeReparation" => ["PHP/VIEW/", "ListeReparation", "Liste des reparations"],
     "formReparation" => ["PHP/VIEW/", "FormReparation", "Détail de la reparation"],
