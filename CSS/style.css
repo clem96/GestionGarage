@@ -9,8 +9,8 @@ body{
 }
 
 img{
-   height: 100%;
-   margin: 0px;
+    max-height: 100%;
+    max-width: 100%;
 }
 
 div{
@@ -35,9 +35,16 @@ flex-flow: row;
 }
 
 header{
-    height: 15vh;
+    justify-content: space-evenly;
+    display: flex;
+    height: 39vh;
 }
-
+.titre {
+    flex-direction: column;
+    text-transform: uppercase;
+    justify-content: center;
+    align-items: center;
+}
 .info{
     border: 1px solid black;
 }
@@ -57,10 +64,6 @@ button{
 
 .couleur{
 background-color: lightblue;
-}
-
-.logo{
-    width: 5em;
 }
 
 footer{
