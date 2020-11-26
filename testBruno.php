@@ -38,7 +38,18 @@ spl_autoload_register("chargerClasse");
 
 */
 include "PHP/CONTROLLER/Vehicules.Class.php";
+include "PHP/CONTROLLER/Pieces.Class.php";
+include "PHP/CONTROLLER/Clients.Class.php";
+include "PHP/CONTROLLER/Factures.Class.php";
+include "PHP/CONTROLLER/Reparations.Class.php";
+include "PHP/CONTROLLER/Interventions.Class.php";
+include "PHP/CONTROLLER/Pieces.Class.php";
 include "PHP/MODEL/VehiculesManager.Class.php";
+include "PHP/MODEL/PiecesManager.Class.php";
+include "PHP/MODEL/ClientsManager.Class.php";
+include "PHP/MODEL/FacturesManager.Class.php";
+include "PHP/MODEL/ReparationsManager.Class.php";
+include "PHP/MODEL/InterventionsManager.Class.php";
 include "PHP/MODEL/DbConnect.Class.php";
 
 DbConnect::Init();
@@ -62,26 +73,26 @@ DbConnect::Init();
 
 //On teste la suppression
 //echo 'On supprime un article <br>';
-$pSupp=VehiculesManager::findById(5);
-var_dump($pSupp);
-VehiculesManager::delete($pSupp);
+//$pSupp=VehiculesManager::findById(1);
+//var_dump($pSupp);
+//VehiculesManager::delete($pSupp);
 
 
 //On teste la mise a jour
-//$pRecharge=FacturesManager::findById(5);
-//$pRecharge->setDateFacture("2020-12-26");
+//$pRecharge=VehiculesManager::findById(6);
+//$pRecharge->setKlmVehicule(12500);
 //var_dump($pRecharge);
-//FacturesManager::update($pRecharge);
+//VehiculesManager::update($pRecharge);
 
 
 //On affiche le liste des objets
 //echo 'On affiche la liste des objet <br>';
-//$tableau=VehiculesManager::getList();
-//var_dump($tableau);
-//foreach($tableau as $elt)
-//{
-//	echo $elt->toString()."\n";
-//}
+$tableau=PiecesManager::getList();
+var_dump($tableau);
+foreach($tableau as $elt)
+{
+	echo $elt->toString()."\n";
+}
 //include "PHP/VIEW/Footer.php";
 
 ?>

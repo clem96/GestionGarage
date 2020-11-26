@@ -77,6 +77,7 @@ background-color: beige ;
 button{
     margin: 2em;
     padding: 1em;
+    border-radius: 1em;
 }
 
 .couleur{
@@ -98,4 +99,14 @@ a {
 
 .titre{
     text-align: center;
+}
+
+.vert{
+    background-color: rgb(1, 219, 1);
+}
+.orange{
+    background-color : rgb(251, 181, 51);
+}
+.rouge{
+    background-color : rgb(248, 100, 100);
 }

@@ -30,6 +30,7 @@ class PiecesManager
         $db = DbConnect::getDb();
         $q = $db->query("SELECT * FROM pieces");
         while ($donnees = $q->fetch(PDO::FETCH_ASSOC)) {
+            var_dump($donnees);
             if ($donnees != false) {
                 $liste[] = new Pieces($donnees);
             }

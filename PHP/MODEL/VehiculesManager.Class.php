@@ -24,7 +24,7 @@ class VehiculesManager
      $q=$db->prepare("UPDATE Vehicules SET marqueVehicule=:marqueVehicule,modeleVehicule=:modeleVehicule,immatriculationVehicule=:immatriculationVehicule,klmVehicule=:klmVehicule,idClient=:idClient WHERE idVehicule=:idVehicule");
      $q->bindValue(":idVehicule", $obj->getIdVehicule());
      $q->bindValue(":marqueVehicule", $obj->getMarqueVehicule());
-     $q->bindValue(":modelVehicule", $obj->getModeleVehicule());
+     $q->bindValue(":modeleVehicule", $obj->getModeleVehicule());
      $q->bindValue(":immatriculationVehicule", $obj->getImmatriculationVehicule());
      $q->bindValue(":klmVehicule", $obj->getKlmVehicule());
      $q->bindValue(":idClient", $obj->getIdClient());
@@ -64,7 +64,7 @@ class VehiculesManager
  {
      $db=DbConnect::getDb();
      $liste = [];
-     $q = $db->query("SELECT * FROM Vehicules");
+     $q = $db->query("SELECT * FROM Vehicules ORDER BY immatriculationVehicule");
      while ($donnees = $q->fetch(PDO::FETCH_ASSOC))
      {
         if ($donnees != false)
